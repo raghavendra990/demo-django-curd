@@ -7,6 +7,5 @@ mysqlclient==2.2.1
 PyJWT==2.8.0
 pytz==2023.3.post1
 sqlparse==0.4.4
-typing_extensions==4.9.0,
 gunicorn
 psycopg2-binary

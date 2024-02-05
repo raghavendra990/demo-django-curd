@@ -26,9 +26,10 @@ SECRET_KEY = 'django-insecure-z3uf5aq$d(5l6m0dce^p-6@^pc1)s(-2h2pghqg13tfq2o_!^v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['3.6.86.118', 'localhost', '127.0.0.1']
+#ALLOWED_HOSTS = ['*']
 APPLICATION_NAME = 'backend_service'
+CORS_ALLOWED_ORIGINS = ["http://127.0.0.1:3000", "http://localhost:3000", "http://demo-backend-123.s3-website.ap-south-1.amazonaws.com"]
 
 # Application definition
 
@@ -41,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'userauth',
-    'useritem'
+    'useritem',
+    'corsheaders'
 ]
 
 REST_FRAMEWORK = {
@@ -68,6 +70,8 @@ MIDDLEWARE = [
     # 'django.contrib.auth.middleware.AuthenticationMiddleware',
     # 'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware'
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -101,7 +105,7 @@ DATABASES = {
         'USER': os.getenv('DB_USER', 'root'),
         'PASSWORD': os.getenv('DB_PASSWORD', 'raghav4321'),
         'HOST': os.getenv('DB_HOST', '127.0.0.1'),
-        'PORT': os.getenv('DB_PORT', '3307'),
+        'PORT': os.getenv('DB_PORT', '3306'),
 
     }
 }
