@@ -71,7 +71,7 @@ Docker version 24.0.2
   	
 
 ## Backend structure: 
-![Architecture](/architecture.png)
+![Architecture](/loadbalancer-architecture.png)
 
 Backend is built using django rest framework and Postgres as backend DB. 
 
