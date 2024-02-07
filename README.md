@@ -51,7 +51,7 @@ MySQL 8<br />
 
 ## Installation
 ## clone the backend project
-	git clone [https://github.com/raghavendra990/demo-docker-backend.git](https://github.com/raghavendra990/demo-django-curd.git)
+	git clone https://github.com/raghavendra990/demo-docker-backend.git
 	cd demo-django-curd
  	
  ### make virtual env
